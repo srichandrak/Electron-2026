@@ -1,0 +1,15 @@
+{
+  "name": "@electron-2026/services",
+  "version": "1.0.0",
+  "description": "Backend services for Electron-2026 (OBC RAG, AI)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.29.1",
+    "dotenv": "^17.2.3"
+  }
+}

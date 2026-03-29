@@ -1,0 +1,71 @@
+{
+  "name": "@electron-2026/desktop",
+  "version": "1.0.0",
+  "description": "PlanCode ProMax - Electron PDF Viewer Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:react": "react-scripts start",
+    "dev": "concurrently \"npm run start:react\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "react-scripts build",
+    "build:electron": "npm run build && electron-builder",
+    "test": "react-scripts test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@electron-2026/pdf-viewer": "workspace:*",
+    "@electron-2026/services": "workspace:*",
+    "@electron-2026/shared": "workspace:*",
+    "@electron-2026/ui": "workspace:*",
+    "dotenv": "^17.2.3",
+    "electron-json-storage": "^4.6.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.block.plancode.promax",
+    "productName": "PlanCode ProMax",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "icon": "public/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "icon": "public/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "public/icon.png",
+      "target": "AppImage"
+    }
+  },
+  "browserslist": {
+    "production": [
+      "last 1 electron version"
+    ],
+    "development": [
+      "last 1 electron version"
+    ]
+  }
+}

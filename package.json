@@ -1,0 +1,22 @@
+{
+  "name": "electron-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PlanCode ProMax - Electron PDF Viewer Monorepo",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "dev:desktop": "pnpm --filter @electron-2026/desktop dev",
+    "build:desktop": "pnpm --filter @electron-2026/desktop build",
+    "start:desktop": "pnpm --filter @electron-2026/desktop start"
+  },
+  "devDependencies": {
+    "turbo": "^2.8.21"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

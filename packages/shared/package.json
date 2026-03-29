@@ -1,0 +1,11 @@
+{
+  "name": "@electron-2026/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities for Electron-2026 monorepo",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [],
+  "license": "ISC"
+}
